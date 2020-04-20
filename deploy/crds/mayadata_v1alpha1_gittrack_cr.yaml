@@ -1,0 +1,12 @@
+apiVersion: mayadata.io/v1alpha1
+kind: GitTrack
+metadata:
+  name: example-gittrack
+spec:
+  repository: https://github.com/mayacloud/hactoberfest-2019.git
+  branch: master
+  deployKey:
+    secretName: git-secret1
+    secretNamespace: default
+    key: data
+    type: HTTPBasicAuth

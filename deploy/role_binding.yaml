@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: gittrack
+subjects:
+- kind: ServiceAccount
+  name: gittrack
+roleRef:
+  kind: Role
+  name: gittrack
+  apiGroup: rbac.authorization.k8s.io
